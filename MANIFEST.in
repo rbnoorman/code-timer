@@ -1,0 +1,3 @@
+include codetimer/core/settings.json
+include codetimer/core/log.csv
+include codetimer/core/knock.wav
