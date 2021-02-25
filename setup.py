@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='code-timer',
+    name='codetimer',
     version='0.1',
-    packages=['code-timer'],
+    packages=['codetimer'],
     url='http://github.com/rbnoorman/code-timer',
     license='Dunno',
     author='Ruben Noorman',

@@ -1,3 +1,7 @@
+#TODO logische namen en structuur aanbrengen
+#TODO main.py bestand maken met daarin CLICK voor command line interface
+
+
 import json
 import os
 import shutil
@@ -26,15 +30,16 @@ class CodeTimer:
         # Initial task
         self.task = self.settings['default_task']
 
-    def start_session(self):
-        """Starts a session, loops over appropriate timers"""
-
         # Stats for picking right timer
         self.last_timer = ""
         self.pomodoro_count = 0
         self.timer_active = True
         self.countdown_active = True
         self.timer_start_time = datetime.now().strftime("%d-%m-%Y %H:%M")
+
+
+    def main(self):
+        """Starts a session, loops over appropriate timers"""
 
         # Loop for the duration of the session
         while self.timer_active:
@@ -113,4 +118,4 @@ class CodeTimer:
 
 if __name__ == "__main__":
     CT = CodeTimer()
-    CT.start_session()
+    CT.main()
