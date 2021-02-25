@@ -19,7 +19,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
                     if 'git+' not in x]
 
 setup (
- name = 'codetimer',
+ name = 'codingtimer',
  description = 'A simple commandline timer based on the pomodoro technique',
  version = '1.0.0',
  packages = find_packages(), # list of all packages
@@ -27,14 +27,14 @@ setup (
  python_requires='>=3.8', # any python greater than 3.8
  entry_points='''
         [console_scripts]
-        codetimer=codetimer.__main__:main
+        codingtimer=codingtimer.__main__:main
     ''',
  author="Ruben Noorman",
  keyword="pomodoro, cli, terminal, timer, productivity, coding",
  long_description=README,
  long_description_content_type="text/markdown",
  license='MIT',
- url='https://github.com/rbnoorman/codetimer',
+ url='https://github.com/rbnoorman/code-timer',
  download_url='https://github.com/rbnoorman/code-timer/archive/main.zip',
   dependency_links=dependency_links,
   author_email='rbnoorman@protonmail.com',

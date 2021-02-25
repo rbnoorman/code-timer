@@ -1,9 +1,9 @@
 import click
-from codetimer.codetimer import CodeTimer
+from codingtimer.codingtimer import CodingTimer
 
 @click.command()
 def main():
-    CT = CodeTimer()
+    CT = CodingTimer()
     CT.main()
 
 if  __name__ == "__main__":

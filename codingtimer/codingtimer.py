@@ -1,7 +1,3 @@
-#TODO logische namen en structuur aanbrengen
-#TODO main.py bestand maken met daarin CLICK voor command line interface
-
-
 import json
 import os
 import shutil
@@ -13,14 +9,14 @@ from datetime import datetime
 from playsound import playsound
 
 
-class CodeTimer:
+class CodingTimer:
     """Overall class to manage timer and its behavior."""
 
     def __init__(self):
         """Initialize timer attributes."""
 
         # Import settings
-        self.settings = json.load(open('codetimer/core/settings.json'))
+        self.settings = json.load(open('codingtimer/core/settings.json'))
 
         # Duration settings
         self.pomodoro = self.settings['pomodoro']
@@ -49,21 +45,21 @@ class CodeTimer:
                 os.system('clear')
                 print("Pomodoro has ended.")
                 self.pomodoro_count += 1
-                playsound('codetimer/core/knock.wav')
+                playsound('codingtimer/core/knock.wav')
             elif self.pomodoro_count % 4 != 0:
                 # If last timer was pomodoro but not the fourth in a row, run a short break
                 self.timer_start('Short break', self.short_break)
                 os.system('clear')
                 print("Pomodoro has ended.")
                 print("Short break has ended.")
-                playsound('codetimer/core/knock.wav')
+                playsound('codingtimer/core/knock.wav')
             else:
                 # After every fourth pomodoro, run a long break
                 self.timer_start('Long Break', self.long_break)
                 os.system('clear')
                 print("Pomodoro has ended.")
                 print("Long break has ended.")
-                playsound('codetimer/core/knock.wav')
+                playsound('codingtimer/core/knock.wav')
 
     def timer_start(self, timer_name, duration):
         """Start the timer"""
@@ -118,9 +114,9 @@ class CodeTimer:
             total_duration
         ]
 
-        with open('codetimer/core/log.csv', 'a+', newline='') as log:
+        with open('codingtimer/core/log.csv', 'a+', newline='') as log:
             writer(log).writerow(data)
 
 if __name__ == "__main__":
-    CT = CodeTimer()
+    CT = CodingTimer()
     CT.main()

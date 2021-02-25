@@ -1,4 +1,4 @@
-# Code-timer
+# Codingtimer
 A simple commandline timer based on pomodoro-technique written in Python.
 
 # Installation
