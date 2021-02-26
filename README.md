@@ -1,4 +1,4 @@
-# Codingtimer
+# pomocodo
 A simple commandline timer based on pomodoro-technique written in Python.
 
 # Installation
@@ -6,19 +6,19 @@ A simple commandline timer based on pomodoro-technique written in Python.
 ## Using Pip
 
 ```bash
-$ pip install codetimer
+$ pip install pomocodo
 ```
 
 ## Manual
 ```bash
-$ git clone https://github.com/rbnoorman/codetimer
-$ cd codetimer
+$ git clone https://github.com/rbnoorman/pomocodo
+$ cd pomocodo
 $ python3 setup.py install
 ```
 
 # Usage
 
 ```bash
-$ codetimer
+$ pomocodo
 ```
 

@@ -9,14 +9,14 @@ from datetime import datetime
 from playsound import playsound
 
 
-class CodingTimer:
+class PomoCodo:
     """Overall class to manage timer and its behavior."""
 
     def __init__(self):
         """Initialize timer attributes."""
 
         # Import settings
-        self.settings = json.load(open('codingtimer/core/settings.json'))
+        self.settings = json.load(open('settings.json'))
 
         # Duration settings
         self.pomodoro = self.settings['pomodoro']
@@ -45,21 +45,21 @@ class CodingTimer:
                 os.system('clear')
                 print("Pomodoro has ended.")
                 self.pomodoro_count += 1
-                playsound('codingtimer/core/knock.wav')
+                playsound('knock.wav')
             elif self.pomodoro_count % 4 != 0:
                 # If last timer was pomodoro but not the fourth in a row, run a short break
                 self.timer_start('Short break', self.short_break)
                 os.system('clear')
-                print("Pomodoro has ended.")
+                print("pomodoro has ended.")
                 print("Short break has ended.")
-                playsound('codingtimer/core/knock.wav')
+                playsound('knock.wav')
             else:
                 # After every fourth pomodoro, run a long break
                 self.timer_start('Long Break', self.long_break)
                 os.system('clear')
-                print("Pomodoro has ended.")
+                print("pomodoro has ended.")
                 print("Long break has ended.")
-                playsound('codingtimer/core/knock.wav')
+                playsound('knock.wav')
 
     def timer_start(self, timer_name, duration):
         """Start the timer"""
@@ -69,7 +69,7 @@ class CodingTimer:
 
         if not self.countdown_active:
             # Countdown ended by user, store data, reset stats and change active flag to false.
-            if timer_name == "Pomodoro":
+            if timer_name == "pomodoro":
                 time_worked = timer
             else:
                 time_worked = 0
@@ -114,9 +114,9 @@ class CodingTimer:
             total_duration
         ]
 
-        with open('codingtimer/core/log.csv', 'a+', newline='') as log:
+        with open('log.csv', 'a+', newline='') as log:
             writer(log).writerow(data)
 
 if __name__ == "__main__":
-    CT = CodingTimer()
+    CT = PomoCodo()
     CT.main()

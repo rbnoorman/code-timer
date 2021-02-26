@@ -19,16 +19,17 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
                     if 'git+' not in x]
 
 setup (
- name = 'codingtimer',
- description = 'A simple commandline timer based on the pomodoro technique',
- version = '1.0.0',
+ name = 'Pomocodo',
+ description = 'A simple commandline timer based on the Pomodoro technique',
+ version = '1.0.3',
  packages = find_packages(), # list of all packages
  install_requires = install_requires,
  python_requires='>=3.8', # any python greater than 3.8
  entry_points='''
         [console_scripts]
-        codingtimer=codingtimer.__main__:main
+        pomocodo=pomocodo.__main__:main
     ''',
+ include_package_data=True,
  author="Ruben Noorman",
  keyword="pomodoro, cli, terminal, timer, productivity, coding",
  long_description=README,

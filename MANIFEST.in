@@ -1,3 +1,4 @@
-include codingtimer/core/settings.json
-include codingtimer/core/log.csv
-include codingtimer/core/knock.wav
+include readme.md
+include pomocodo/core/settings.json
+include pomocodo/core/log.csv
+include pomocodo/core/knock.wav

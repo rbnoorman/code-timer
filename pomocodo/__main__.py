@@ -1,9 +1,9 @@
 import click
-from codingtimer.codingtimer import CodingTimer
+from pomocodo.pomocodo import PomoCodo
 
 @click.command()
 def main():
-    CT = CodingTimer()
+    CT = PomoCodo()
     CT.main()
 
 if  __name__ == "__main__":
