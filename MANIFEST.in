@@ -1,4 +1,4 @@
 include readme.md
-include pomocodo/core/settings.json
-include pomocodo/core/log.csv
-include pomocodo/core/knock.wav
+include pomocodo/settings.json
+include pomocodo/log.csv
+include pomocodo/knock.wav
