@@ -21,7 +21,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
 setup (
  name = 'Pomocodo',
  description = 'A simple commandline timer based on the Pomodoro technique',
- version = '1.0.3',
+ version = '1.0.4',
  packages = find_packages(), # list of all packages
  install_requires = install_requires,
  python_requires='>=3.8', # any python greater than 3.8
