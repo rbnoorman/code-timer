@@ -1,13 +1,7 @@
-# pomocodo
+# Pomocodo
 A simple commandline timer based on pomodoro-technique written in Python.
 
 # Installation
-
-## Using Pip
-
-```bash
-$ pip install pomocodo
-```
 
 ## Manual
 ```bash
@@ -16,9 +10,8 @@ $ cd pomocodo
 $ python3 setup.py install
 ```
 
-# Usage
+### Next steps
+Working on publishing to Pypi but couldn't get non-code files to work. Might pick that up later.
 
-```bash
-$ pomocodo
-```
-
+- Adding a way to change the task on start
+- Adding a way to change settings from cli
